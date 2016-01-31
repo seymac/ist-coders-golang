@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/seymac/ist-coders-golang/composition"
+	"github.com/seymac/ist-coders-golang/people"
 	"github.com/seymac/ist-coders-golang/shape"
 )
 
@@ -30,11 +30,11 @@ func main() {
 	// shape.privateMultiplyFunction(3,4)
 
 	//struct initialization
-	person := composition.Person{Name: "Jane", Lastname: "Doe"}
+	person := people.Person{Name: "Jane", Lastname: "Doe"}
 	person.SayHello()
 
 	//function call after composition
-	student := composition.Student{composition.Person{"John", "Smith"}, "Harvard University"}
+	student := people.Student{people.Person{"John", "Smith"}, "Harvard University"}
 	student.SayHello()
 
 }
