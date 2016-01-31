@@ -7,23 +7,27 @@ type Shape interface {
 }
 
 type Triangle struct {
-	height float64
-	base   float64
+	Height float64
+	Base   float64
 }
 
 func (t Triangle) Area() float64 {
-	return (t.height * t.base) / 2
+	return (t.Height * t.Base) / 2
 }
 
 type Rectangle struct {
-	height float64
-	width  float64
+	Height float64
+	Width  float64
 }
 
 func (r Rectangle) Area() float64 {
-	return (r.height * r.width)
+	return (r.Height * r.Width)
 }
 
 func PrintShapeArea(s Shape) {
-	fmt.Println(fmt.Sprintf("Shape area is: %s", s.Area()))
+	fmt.Println(fmt.Sprintf("Shape area is: %f", s.Area()))
+}
+
+func privateMultiplyFunction(x int, y int) int {
+	return x * y
 }
