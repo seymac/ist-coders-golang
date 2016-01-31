@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/seymac/ist-coders-golang/composition"
+)
 
 func main() {
 	fmt.Println("Hello world")
@@ -13,6 +17,15 @@ func main() {
 	result = Sum(x, y)
 
 	fmt.Println(fmt.Sprintf("result is: %d", result))
+
+	//struct initialization
+	person := composition.Person{Name: "Jane", Lastname: "Doe"}
+	person.SayHello()
+
+	//function call after composition
+	student := composition.Student{composition.Person{"John", "Smith"}, "Harvard University"}
+	student.SayHello()
+
 }
 
 //sample function
